@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script defer src="./assets/js/main.js"></script>
+  
+  <title>Frontend Mentor | Password generator app</title>
+</head>
+<body>
+
+    <header class="layouts__passwd"> 
+        <h1 class="passwd__title">Password Generator</h1>
+    </header>
+    <section class="generator__copied"> 
+        <h2 class="generator__title">P4$5W0rD!</h2>
+        <img class="generator__copy" src="./assets/images/icon-copy.svg" alt=""> 
+    </section>
+    <main class="layout__generator"> 
+        <!-- <section class="generator__wrappers">  -->
+        <section class="generator__bar"> 
+            <section class="generator__length"> 
+                <h3 class="length__title">Character Length</h3>
+                <p class="length__number">0</p>
+            </section>
+            <input type="range" min="0" max="50" value="10" class="bar__range">
+        </section>
+        <ul class="generator__include"> 
+            <li class="include__item"> 
+                <label for="upper" class="item__label">
+                    <input type="checkbox" name="upperletter" class="item__boxs" id="upper">
+                    <span class="item__checkbox">
+                        <img class="item__icon" src="./assets/images/icon-check.svg" alt=""> 
+                    </span>
+                    Include Uppercase Letters
+                </label>
+            </li>
+            <li class="include__item"> 
+                <label for="lower" class="item__label">
+                    <input type="checkbox" name="lowerletter" class="item__boxs" id="lower">
+                    <span class="item__checkbox">
+                        <img class="item__icon" src="./assets/images/icon-check.svg" alt=""> 
+                    </span>
+                    Include Lowercase Letters
+                </label>
+            </li>
+            <li class="include__item"> 
+                <label for="incNum" class="item__label">
+                    <input type="checkbox" name="numbersInc" class="item__boxs" id="incNum">
+                    <span class="item__checkbox">
+                        <img class="item__icon" src="./assets/images/icon-check.svg" alt=""> 
+                    </span>
+                    Include Numbers
+                </label>
+                
+            </li>
+            <li class="include__item"> 
+                <label for="incSym" class="item__label">
+                    <input type="checkbox" name="symbolsInc" class="item__boxs" id="incSym">
+                    <span class="item__checkbox">
+                        <img class="item__icon" src="./assets/images/icon-check.svg" alt=""> 
+                    </span>
+                    Include Symbols
+                </label>
+            </li>
+        </ul>
+        <section class="generator__strength"> 
+            <h3 class="strength__title">Strength</h3> 
+            <div class="strength__bars"> 
+                <div class="bars__item"></div> 
+                <div class="bars__item"></div> 
+                <div class="bars__item"></div> 
+                <div class="bars__item"></div> 
+            </div>
+        </section>
+        <!-- <section class="generator__button">  -->
+            <button type="button" class="button__generate">Generate <img class="generate__icon" src="./assets/images/icon-arrow-right.svg" alt=""> </button>
+        <!-- </section> -->
+        <!-- </section> -->
+    </main> 
+</body>
+</html>
