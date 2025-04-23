@@ -5,24 +5,26 @@
 
 @include fontFace('jetbrains', '../fonts/JetBrainsMono-VariableFont_wght.ttf', 400 700);
 
+
 body {
+  font-size: 1rem;
   font-family: jetbrains;
   background-color: $grey-950-color;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.6rem;
-  padding-inline: 1.6rem;
+  gap: 1rem;
+  padding-inline: 1rem;
 }
 
 layout__passwd {
-  height: 10rem;
+  height: 6.25rem; //  100px
 }
 
 .passwd__title {
   color: $grey-600-color;
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: 700;
   margin: 0 auto;
 }
@@ -30,10 +32,9 @@ layout__passwd {
 .layout__generator {
   width: 100%;
   display: grid;
-  gap: 3.2rem;
+  gap: 2rem; //32px
   background-color: $grey-800-color;
-  padding: 1.6rem;
-  
+  padding: 1rem;
 }
 
 .generator__copied {
@@ -42,12 +43,12 @@ layout__passwd {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.6rem;
+  padding: 1rem;
 }
 
 .generator__title {
   color: $grey-700-color;
-  font-size: 2.4rem;
+  font-size: 1.5rem; //24px
 }
 
 .generator__copied {
@@ -55,50 +56,118 @@ layout__passwd {
 }
 
 .generator__bar {
-  width: 100%;
-  margin-bottom: .8rem;
-}
-
-.bar__range {
-  width: 100%;
-  height: 3rem;
+  display: grid; 
+  max-width: 100%;
+  margin-bottom: .5rem; //8px
 }
 
 .generator__length {
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: .5rem; //8px
 }
 
 .length__title {
   color: $white-color;
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 
 .length__number {
   color: $green-200-color;
-  font-size: 2.4rem;
+  font-size: 1.5rem; //24px
 }
+
+// Empezando Estilos a la Barra RANGE 
+//borrando estilos por defecto
+
+.bar__range {
+  -webkit-appearance: none;
+  width: 100%;
+  background-color: transparent; 
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  &:focus {
+    outline: none;
+  }
+  &::-ms-track { // Internet Explorer
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    background-color: transparent;
+    color: transparent;
+  }
+// Estilo al THUMB CHROME
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 1.75rem; // 28px
+    width: 1.75rem; //28px
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    margin-top: -0.675rem; //para chrome se necesita especificar y moz y ie now
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, .7 ), 0 0 1px #0d0d0d, 1px 1px 10px 5px rgba(0,0,0, .5) inset;
+    border: .1rem solid #000;
+  }
+// Estilos para el TRACK Chrome 
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: $space-100;
+    cursor: pointer;
+    background-color: $grey-850-color;
+    box-shadow: .9px .5px 1px 2px rgba(0, 0, 0, .6) inset; //, 0 0 1px #0d0d0d; 
+    border-radius: 3px;
+    border: .1px solid #010101;
+  }
+  &:focus::-webkit-slider-runnable-track {
+    background-color: transparent;
+  }
+// Estilos al THUMB( para FIREFOX los mismos de arriba)
+  &::-moz-range-thumb {
+    /* border: .5px solid #000; */
+    height: 1.75rem; // 28px
+    width: 1.75rem; //28px
+    border-radius: 50%;
+    background-color: #ffffff;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, .7 ), 0 0 1px #0d0d0d, 1px 1px 10px 5px rgba(0,0,0, .5) inset;
+  }
+// Estilos TRACK FireFox
+  &::-moz-range-track {
+    width: 100%;
+    height: $space-100;
+    border-radius: .188rem;
+    background-color: $grey-850-color;
+    box-shadow: .9px .5px 1px 2px rgba(0, 0, 0, .6) inset; //, 0 0 1px #0d0d0d; 
+    border: .1px solid #010101;
+  }
+
+}
+
 
 .generator__include {
   color: $white-color;
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: 700;
   display: grid;
   align-items: flex-start;
-  gap: 1.6rem;
+  gap: 1rem;
 }
 
 .include__item {
   display: flex;
-  gap: 1.6rem;
+  gap: 1rem;
 }
 
 .item__label {
   display: flex;
   align-items: center;
-  gap: 1.6rem;
+  gap: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .item__boxs {
@@ -106,8 +175,8 @@ layout__passwd {
 }
 
 .item__checkbox {
-  width: 2rem;
-  height: 2rem;
+  width: 1.25rem; //20px
+  height: 1.25rem; //20px
   border: 2px solid $white-color;
   border-radius: .2rem;
   display: grid;
@@ -133,39 +202,72 @@ layout__passwd {
 .generator__strength {
   background-color: $grey-850-color;
   color: $grey-600-color;
-  font-size: 1.6rem;
+  font-size: 1rem;
   text-transform: uppercase;
-  padding: 1.4rem 1.6rem;
+  padding: 0.875rem 1rem;
   display: flex;
   justify-content: space-between;
 }
 
 .strength__bars {
   display: flex;
-  gap: .8rem;
+  gap: .5rem; //8px
 }
 
 .bars__item {
-  width: 1rem;
-  height: 2.8rem;
+  width: 0.625rem; //10PX
+  height: 1.75rem; //28px
   border: 2px solid $white-color;
 }
 
 .button__generate {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 1.6rem;
+  gap: 1rem;
+  color: $grey-950-color;
   background-color: $green-200-color;
-  padding: 1.6rem 10.4rem;
-  font-size: 1.6rem;
+  padding: 1rem 0;
+  font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
+  margin-top: -1rem;
   &:hover {
     cursor: pointer;
   }
 }
 
-
+@media (min-width:600px) {
+    
+  .passwd__title {
+    font-size: $space-300;
+  }
+  .generator__copied {
+    max-width: 33.75rem;
+    padding: 2rem;
+  }
+  .generator__title {
+    font-size: $space-400;
+  }
+  .generator__copy {
+    width: 1.313rem;
+    height: 1.5rem;
+  }
+  .layout__generator {
+    max-width: 33.75rem;
+    padding: $space-300 $space-400;
+  }
+  .length__title {
+    font-size: $space-250;
+  }
+  .length__number {
+    font-size: $space-400;
+  }
+  .item__label {
+    font-size: $space-250;
+  }
+  
+}
 
 
 
