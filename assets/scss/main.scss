@@ -266,6 +266,13 @@ layout__passwd {
   .item__label {
     font-size: $space-250;
   }
+  .generator__strength {
+    padding: $space-300 $space-400;
+  }
+  .button__generate {
+    margin: 0;
+    font-size: $text-5;
+  }
   
 }
 

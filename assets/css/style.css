@@ -330,6 +330,13 @@ layout__passwd {
   .item__label {
     font-size: 1.125rem;
   }
+  .generator__strength {
+    padding: 1.5rem 2rem;
+  }
+  .button__generate {
+    margin: 0;
+    font-size: 1.125rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
