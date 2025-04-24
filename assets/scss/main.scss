@@ -92,101 +92,42 @@ layout__passwd {
 // Empezando Estilos a la Barra RANGE 
 //borrando estilos por defecto
 
+// .bar__range {
+//   -webkit-appearance: none;
+//   width: 19.438rem;
+//   height: .625rem;
+//   background: linear-gradient(90deg, #a4ffaf var(--track-position), transparent 0);
+//   border-radius: 3px;
+//   cursor: pointer;
+//   }
+
 .bar__range {
-  -webkit-appearance: none;
-  width: 100%;
-  /* background-color: transparent;  */
-  background: linear-gradient(90deg, #a4ffaf var(--track-position), transparent 0);
-  &::-webkit-slider-thumb {
     -webkit-appearance: none;
-  }
-  &:focus {
-    outline: none;
-  }
-  &::-ms-track { // Internet Explorer
-    width: 100%;
+    width: 19.438em;
+    height: 1em;
+    border-radius: 0.5em;
+    background:linear-gradient(90deg, #a4ffaf var(--track-position), transparent 0);
     cursor: pointer;
-    background: transparent;
-    background-color: transparent;
-    color: transparent;
-  }
-// Estilo al THUMB CHROME
+
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    height: 1.75rem; // 28px
-    width: 1.75rem; //28px
+    height: 2.5em;
+    width: 2.5em;
+    background: #ccc;
     border-radius: 50%;
-    background-color: #fff;
     cursor: pointer;
-    margin-top: -0.675rem; //para chrome se necesita especificar y moz y ie now
-    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, .7 ), 0 0 1px #0d0d0d, 1px 1px 10px 5px rgba(0,0,0, .5) inset;
-    border: .1rem solid #000;
-  }
-// Estilos para el TRACK Chrome 
-  &::-webkit-slider-runnable-track {
-    width: 100%;
-    height: $space-100;
-    cursor: pointer;
-/*     background-color: string.unquote("linear-gradient(to right, var(--green-200) var(--colorRange) , var(--grey-850) var(--colorRange))"); */
-    /* background-color: linear-gradient(to right, $green-200-color 50% , $grey-850-color 50%); */
-    background-color: linear-gradient(90deg, #a4ffaf var(--track-position), transparent 0);
-    box-shadow: .9px .5px 1px 2px rgba(0, 0, 0, .6) inset; //, 0 0 1px #0d0d0d; 
-    border-radius: 3px;
-    border: .1px solid #010101;
-  }
-  &:focus::-webkit-slider-runnable-track {
-    background-color: transparent;
-  }
-// Estilos al THUMB( para FIREFOX los mismos de arriba)
+    }
+
   &::-moz-range-thumb {
-    /* border: .5px solid #000; */
-    height: 1.75rem; // 28px
-    width: 1.75rem; //28px
+    height: 1.5em;
+    width: 1.5em;
+    background: #ccc;
     border-radius: 50%;
-    background-color: #ffffff !important;
     cursor: pointer;
-    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, .7 ), 0 0 1px #0d0d0d, 1px 1px 10px 5px rgba(0,0,0, .5) inset;
-  }
-// Estilos TRACK FireFox
-  &::-moz-range-track {
-    width: 100%;
-    height: $space-100;
-    border-radius: .188rem;
-    background: linear-gradient(90deg, #a4ffaf var(--track-position), transparent 0);
-    /* background: string.unquote("linear-gradient(to right, var(--green-200) var(--colorRange)% , var(--grey-850) var(--colorRange)%)"); */
-/*     background-color: linear-gradient(to right, $green-200-color 50% , $grey-850-color 50%); */
-    box-shadow: .9px .5px 1px 2px rgba(0, 0, 0, .6) inset; //, 0 0 1px #0d0d0d; 
-    border: .1px solid #010101;
-  }
-//   &::-moz-range-progress {
-//      background-color: red !important;
-// }
+    }
 }
 
-// .bar__range--track {
-//   position: absolute;
-//   top: 86%;
-//   left: 0;
-//   height: 8px;
-//   width: 100%;
-//   background-color: #333;
-//   border-radius: 4px;
-//   transform: translateY(-50%);
-//   z-index: 1;
-//   overflow: hidden; 
-//   &::before {
-//     content: '';
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     height: 100%;
-//     width: 50%;//valor inicial
-//     background-color: #a4ffaf;
-//     z-index: 1;
-//     transition: width .7s linear;
-//
-//   }
-// }
+
 
 
 .generator__include {
