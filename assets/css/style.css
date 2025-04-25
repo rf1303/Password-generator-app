@@ -81,11 +81,10 @@ form, input, select, textarea, button, label {
   font-weight: 400 700;
 }
 :root {
-  --colorRange: 50;
+  --colorRange: 10;
   --green-200: #a4ffaf;
   --grey-850: #17181f;
-  --track-wid: 19.438em;
-  --track-position: calc((.5*1.75) + var(--colorRange) * (19.438 - 1.75) / 100);
+  --track-position: 50%;
 }
 
 body {
