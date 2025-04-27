@@ -58,8 +58,25 @@ layout__passwd {
   font-size: 1.5rem; //24px
 }
 
-.generator__copied {
+.copied__clip {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.copy__clip {
+  background-color: transparent;
+}
+
+.copied__title {
+  opacity: 0;
+  font-size: $text-5;
   color: $green-200-color;
+  text-transform: uppercase;
+}
+
+.copied__image {
+  color: $white-color;
 }
 
 .generator__bar {
@@ -88,18 +105,6 @@ layout__passwd {
   font-size: 1.5rem; //24px
 }
 
-// Empezando Estilos a la Barra RANGE 
-//borrando estilos por defecto
-
-// .bar__range {
-//   -webkit-appearance: none;
-//   width: 19.438rem;
-//   height: .625rem;
-//   background: linear-gradient(90deg, #a4ffaf var(--track-position), transparent 0);
-//   border-radius: 3px;
-//   cursor: pointer;
-//   }
-
 .bar__range {
     -webkit-appearance: none;
     width: 100%;
@@ -120,7 +125,16 @@ layout__passwd {
     border: .1rem solid #000;
     cursor: pointer;
     }
-
+  &::-webkit-slider-thumb:hover {
+    background-color: $grey-950-color !important;
+    box-shadow:  1px 1px 5px 5px rgba(255,255,255, .1) inset;
+    border: 2px solid $green-200-color;
+  }
+  &::-webkit-slider-thumb:focus {
+    background-color: $grey-950-color !important;
+    box-shadow:  1px 1px 5px 5px rgba(255,255,255, .1) inset;
+    border: 2px solid $green-200-color;
+  }
   &::-moz-range-thumb {
     height: 1.75rem;
     width: 1.75rem;
@@ -129,14 +143,17 @@ layout__passwd {
     box-shadow: 1px 1px 2px 4px rgba(0, 0, 0, .7 ), 0 0 1px #0d0d0d, 1px 1px 10px 5px rgba(0,0,0, .5) inset;
     cursor: pointer;
     }
+  &::-moz-range-thumb:hover {
+    background-color: $grey-950-color !important;
+    box-shadow:  1px 1px 5px 5px rgba(255,255,255, .1) inset;
+    border: 2px solid $green-200-color;
+  }
+  &::-moz-range-thumb:focus {
+    background-color: $grey-950-color !important;
+    box-shadow:  1px 1px 5px 5px rgba(255,255,255, .1) inset;
+    border: 2px solid $green-200-color;
+  }
 }
-
-    /* margin-top: -0.675rem; */ //para chrome se necesita especificar y moz y ie now
-// Estilos para el TRACK Chrome 
-/*     background-color: string.unquote("linear-gradient(to right, var(--green-200) var(--colorRange) , var(--grey-850) var(--colorRange))"); */
-    /* background-color: linear-gradient(to right, $green-200-color 50% , $grey-850-color 50%); */
-
-
 
 .generator__include {
   color: $white-color;
@@ -197,11 +214,21 @@ layout__passwd {
   padding: 0.875rem 1rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .strength__bars {
   display: flex;
   gap: .5rem; //8px
+}
+
+.bars__title {
+  opacity: 0;
+  text-transform: uppercase;
+  font-size: $text-2;
+  font-weight: 700;
+  color: $white-color;
+  margin-right: 1rem;
 }
 
 .bars__item {
@@ -217,6 +244,7 @@ layout__passwd {
   gap: 1rem;
   color: $grey-950-color;
   background-color: $green-200-color;
+  border: 2px solid transparent;
   padding: 1rem 0;
   font-size: 1rem;
   font-weight: 700;
@@ -224,6 +252,25 @@ layout__passwd {
   margin-top: -1rem;
   &:hover {
     cursor: pointer;
+    color: $green-200-color;
+    background-color: $grey-800-color;
+    border: 2px solid $green-200-color;
+  }
+  &:focus {
+    cursor: pointer;
+    color: $green-200-color;
+    background-color: $grey-800-color;
+    border: 2px solid $green-200-color;
+  }
+}
+
+.generate__icon {
+  color: $grey-950-color;
+  &:hover {
+    color: $green-200-color;
+  }
+  &:focus {
+    color: $green-200-color;
   }
 }
 

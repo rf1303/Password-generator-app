@@ -132,8 +132,25 @@ layout__passwd {
   font-size: 1.5rem;
 }
 
-.generator__copied {
+.copied__clip {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.copy__clip {
+  background-color: transparent;
+}
+
+.copied__title {
+  opacity: 0;
+  font-size: 1.125rem;
   color: #a4ffaf;
+  text-transform: uppercase;
+}
+
+.copied__image {
+  color: #ffffff;
 }
 
 .generator__bar {
@@ -182,6 +199,16 @@ layout__passwd {
   border: 0.1rem solid #000;
   cursor: pointer;
 }
+.bar__range::-webkit-slider-thumb:hover {
+  background-color: #08070b !important;
+  box-shadow: 1px 1px 5px 5px rgba(255, 255, 255, 0.1) inset;
+  border: 2px solid #a4ffaf;
+}
+.bar__range::-webkit-slider-thumb:focus {
+  background-color: #08070b !important;
+  box-shadow: 1px 1px 5px 5px rgba(255, 255, 255, 0.1) inset;
+  border: 2px solid #a4ffaf;
+}
 .bar__range::-moz-range-thumb {
   height: 1.75rem;
   width: 1.75rem;
@@ -190,10 +217,17 @@ layout__passwd {
   box-shadow: 1px 1px 2px 4px rgba(0, 0, 0, 0.7), 0 0 1px #0d0d0d, 1px 1px 10px 5px rgba(0, 0, 0, 0.5) inset;
   cursor: pointer;
 }
+.bar__range::-moz-range-thumb:hover {
+  background-color: #08070b !important;
+  box-shadow: 1px 1px 5px 5px rgba(255, 255, 255, 0.1) inset;
+  border: 2px solid #a4ffaf;
+}
+.bar__range::-moz-range-thumb:focus {
+  background-color: #08070b !important;
+  box-shadow: 1px 1px 5px 5px rgba(255, 255, 255, 0.1) inset;
+  border: 2px solid #a4ffaf;
+}
 
-/* margin-top: -0.675rem; */
-/*     background-color: string.unquote("linear-gradient(to right, var(--green-200) var(--colorRange) , var(--grey-850) var(--colorRange))"); */
-/* background-color: linear-gradient(to right, $green-200-color 50% , $grey-850-color 50%); */
 .generator__include {
   color: #ffffff;
   font-size: 1rem;
@@ -253,11 +287,21 @@ layout__passwd {
   padding: 0.875rem 1rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .strength__bars {
   display: flex;
   gap: 0.5rem;
+}
+
+.bars__title {
+  opacity: 0;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-right: 1rem;
 }
 
 .bars__item {
@@ -273,6 +317,7 @@ layout__passwd {
   gap: 1rem;
   color: #08070b;
   background-color: #a4ffaf;
+  border: 2px solid transparent;
   padding: 1rem 0;
   font-size: 1rem;
   font-weight: 700;
@@ -281,6 +326,25 @@ layout__passwd {
 }
 .button__generate:hover {
   cursor: pointer;
+  color: #a4ffaf;
+  background-color: #24232c;
+  border: 2px solid #a4ffaf;
+}
+.button__generate:focus {
+  cursor: pointer;
+  color: #a4ffaf;
+  background-color: #24232c;
+  border: 2px solid #a4ffaf;
+}
+
+.generate__icon {
+  color: #08070b;
+}
+.generate__icon:hover {
+  color: #a4ffaf;
+}
+.generate__icon:focus {
+  color: #a4ffaf;
 }
 
 @media (min-width: 600px) {
