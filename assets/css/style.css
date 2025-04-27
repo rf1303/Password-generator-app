@@ -149,8 +149,34 @@ layout__passwd {
   text-transform: uppercase;
 }
 
+@keyframes copiedClick {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.copied__title--click {
+  animation: copiedClick 3s ease-in-out;
+}
+
 .copied__image {
   color: #ffffff;
+  transition: all 2s ease-out;
+}
+.copied__image:hover {
+  color: #a4ffaf;
+}
+.copied__image:focus {
+  color: #a4ffaf;
+}
+
+.copied__clipboard {
+  color: #a4ffaf;
 }
 
 .generator__bar {
@@ -304,10 +330,39 @@ layout__passwd {
   margin-right: 1rem;
 }
 
+.bars__title--active {
+  opacity: 1;
+  transition: opacity 0.4 ease;
+}
+
 .bars__item {
   width: 0.625rem;
   height: 1.75rem;
   border: 2px solid #ffffff;
+}
+
+.bars__item--tooweek {
+  background-color: #f64a4a;
+  border: 2px solid #f64a4a;
+  transition: all 1s ease;
+}
+
+.bars__item--week {
+  background-color: #fb7c58;
+  border: 2px solid #fb7c58;
+  transition: all 1s ease;
+}
+
+.bars__item--medium {
+  background-color: #f8cd65;
+  border: 2px solid #f8cd65;
+  transition: all 1s ease;
+}
+
+.bars__item--strong {
+  background-color: #006a24;
+  border: 2px solid #006a24;
+  transition: all 1s ease;
 }
 
 .button__generate {
