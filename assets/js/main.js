@@ -13,10 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const lengthNumber = document.querySelector('.length__number');
     const barsTitle = document.querySelector('.bars__title');
     const strengthBarItem = document.querySelectorAll(".bars__item");
-    const barsItem01 = document.querySelector('.bars__item--1');
-    const barsItem02 = document.querySelector('.bars__item--2');
-    const barsItem03 = document.querySelector('.bars__item--3');
-    const barsItem04 = document.querySelector('.bars__item--4');
     const includeGenerator = {
         includeUpper: "AOEUIDRTNSZVWMBXKJQPYFGGCHL",
         includeLower: "qjkxbmwvzaoeuidrtnslhcgfyp",
@@ -52,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     
      buttonCopied.addEventListener("click", async () => {
-           /* const copiedText = document.getElementById("textToCopy").value; */
         await navigator.clipboard.writeText(passwordGenerator);
         buttonCopiedTitle.classList.add('copied__title--click');
         buttonCopiedTitle.addEventListener('animationend', () => {
@@ -89,46 +84,27 @@ document.addEventListener('DOMContentLoaded', function () {
                 barsTitle.textContent = `too weak`;
                 barsTitle.classList.add('bars__title--active');
                 strengthAddBars(1, 'bars__item--tooweek');
-                // barsItem01.classList.add('bars__item--tooweek');
-                // console.log('case0: ', barsTitle.textContent); 
                 break;
             case 1: 
                 barsTitle.textContent = `weak`;
                 barsTitle.classList.add('bars__title--active');
                 strengthAddBars(2, 'bars__item--week');
-                // barsItem01.classList.add('bars__item--week');
-                // barsItem02.classList.add('bars__item--week');
-                // console.log('case0: ', barsTitle.textContent); 
                 break;
-            case 3: 
+            case 2: 
                 barsTitle.textContent = `medium`;
                 barsTitle.classList.add('bars__title--active');
                 strengthAddBars(3, 'bars__item--medium');
-                // barsItem01.classList.add('bars__item--medium');
-                // barsItem02.classList.add('bars__item--medium');
-                // barsItem03.classList.add('bars__item--medium');
-                // console.log('case0: ', barsTitle.textContent); 
                 break;
             case 3: 
                 barsTitle.textContent = `strong`;
                 barsTitle.classList.add('bars__title--active');
                 strengthAddBars(4, 'bars__item--strong');
-                // barsItem01.classList.add('bars__item--strong');
-                // barsItem02.classList.add('bars__item--strong');
-                // barsItem03.classList.add('bars__item--strong');
-                // barsItem04.classList.add('bars__item--strong');
-                // console.log('case0: ', barsTitle.textContent); 
                 break;
 
             case 4: 
                 barsTitle.textContent = `strong`;
                 barsTitle.classList.add('bars__title--active');
                 strengthAddBars(4, 'bars__item--strong');
-                // barsItem01.classList.add('bars__item--strong');
-                // barsItem02.classList.add('bars__item--strong');
-                // barsItem03.classList.add('bars__item--strong');
-                // barsItem04.classList.add('bars__item--strong');
-                // console.log('case0: ', barsTitle.textContent); 
                 break;
             default:
                 break;
