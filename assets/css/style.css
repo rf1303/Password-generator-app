@@ -84,10 +84,6 @@ body {
   padding-inline: 1rem;
 }
 
-layout__passwd {
-  height: 6.25rem;
-}
-
 .passwd__title {
   color: #817d92;
   font-size: 1rem;
@@ -424,6 +420,14 @@ layout__passwd {
   }
   .bars__title {
     font-size: 1.5rem;
+  }
+}
+@media (min-width: 1400px) {
+  body {
+    justify-content: flex-start;
+  }
+  .layouts__passwd {
+    margin-top: 8.313rem;
   }
 }
 @media (max-width: 350px) {

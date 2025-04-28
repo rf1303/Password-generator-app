@@ -25,9 +25,6 @@ body {
   padding-inline: 1rem;
 }
 
-layout__passwd {
-  height: 6.25rem; //  100px
-}
 
 .passwd__title {
   color: $grey-600-color;
@@ -366,6 +363,16 @@ layout__passwd {
   .bars__title {
     font-size: $text-2;
   }
+}
+
+@media (min-width:1400px) {
+  body {
+    justify-content: flex-start;
+  }
+
+  .layouts__passwd {
+    margin-top: 8.313rem;
+  } 
 }
 
 @media (max-width:350px) {
